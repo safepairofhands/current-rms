@@ -3,9 +3,11 @@ var chai = require('chai');
 var assert = chai.assert,
     should = chai.should(),
     expect = chai.expect,
-    scapegoat = require('../index'),
+    scapegoat = require('../index')(process.env.CURRENT_SUBDOMAIN, process.env.CURRENT_KEY),
     listProducts = scapegoat.listProducts,
     products = scapegoat.products;
+
+    console.log(scapegoat.listProducts);
 
 describe('Product Tests', function() {
 
