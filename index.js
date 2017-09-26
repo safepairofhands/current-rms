@@ -27,7 +27,6 @@ module.exports = function (subdomain, key) {
     }, params);
   };
   module.products = function(callback, id) {
-    https://api.current-rms.com/api/v1/products/1
     query("GET", "https://api.current-rms.com/api/v1/products/" + id, function(err, res, body) {
       callback(res,JSON.parse(body));
     });
