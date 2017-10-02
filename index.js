@@ -31,6 +31,16 @@ module.exports = function (subdomain, key) {
       callback(res,JSON.parse(body));
     });
   };
+  module.productGroups = function(callback, params) {
+    query("GET", "https://api.current-rms.com/api/v1/product_groups/", function(err, res, body) {
+      callback(res,JSON.parse(body));
+    }, params);
+  };
+  module.stockLevels = function(callback, id) {
+   query("GET", "https://api.current-rms.com/api/v1/products/" + id + "/stock_levels/", function(err, res, body) {
+      callback(res,JSON.parse(body));
+    });    
+  };
 
   return module;
 };

@@ -5,7 +5,9 @@ var assert = chai.assert,
     expect = chai.expect,
     scapegoat = require('../index')(process.env.CURRENT_SUBDOMAIN, process.env.CURRENT_KEY),
     listProducts = scapegoat.listProducts,
-    products = scapegoat.products;
+    products = scapegoat.products,
+    stockLevels = scapegoat.stockLevels,
+    productGroups = scapegoat.productGroups;
 
     console.log(scapegoat.listProducts);
 
@@ -38,6 +40,35 @@ describe('Product Tests', function() {
         done();
       }, testProduct.id);
 
+    }, { per_page: 1 } );
+  });
+
+});
+
+describe('Product Group Tests', function() {
+
+  it('Product Groups return product groups', function(done) {
+    productGroups(function(res,body) {
+      expect(body.product_groups[0]).to.have.any.keys('name');
+      done();
+    }, { per_page: 1, page: 1 } );
+  });
+
+});
+
+describe('Stock Level Tests', function() {
+
+  it('Stock Levels returns a stock level for a product', function(done) {
+    // Get an ID of an existing product first
+    listProducts(function(res,body) {
+      var testProduct = {
+        id: body.products[0].id,
+        name: body.products[0].name
+      };
+      stockLevels(function(res,body) {
+        expect(body.stock_levels[0]).to.have.any.keys('quantity_held');
+        done();
+      }, testProduct.id);
     }, { per_page: 1 } );
   });
 
