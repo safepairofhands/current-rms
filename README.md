@@ -11,11 +11,12 @@ var current = require('current-rms')(CURRENT_SUBDOMAIN, CURRENT_KEY)
 ```
 
 ## Available Methods
+Documentation for the API can be found here:
+
 https://api.current-rms.com/doc
 
-## Running Tests
-Tests use Mocha and Chai, and can be run with the following:
+I'm slowly getting through the methods. Please feel free to contribute with a PR if you need any that are missing in the meantime!
 
-```
-CURRENT_KEY=[your Current API key] CURRENT_SUBDOMAIN=[Your Current subdomain] npm test
-```
+## Tests
+Tests use Mocha and Chai, and can be run with *npm test*.
+
