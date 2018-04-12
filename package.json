@@ -1,6 +1,6 @@
 {
   "name": "current-rms",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Middleware to interface with the Current RMS API in Node.js",
   "main": "index.js",
   "scripts": {
