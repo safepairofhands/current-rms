@@ -2,7 +2,7 @@
 
 This module allows your Node app to query the Current RMS API. Please feel free to join in the development of this module!
 
-## Required Environment Variables
+## Usage
 
 You'll need a Current RMS account and API key to use this module. Usage is as follows:
 
