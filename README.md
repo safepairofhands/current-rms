@@ -15,7 +15,7 @@ Documentation for the API can be found here:
 
 https://api.current-rms.com/doc
 
-I'm slowly getting through the methods. Please feel free to contribute with a PR if you need any that are missing in the meantime!
+I'm slowly getting through the methods. Please feel free to contribute with a PR if you need any that are missing in the meantime.
 
 ## Tests
 Tests use Mocha and Chai, and can be run with *npm test*.
