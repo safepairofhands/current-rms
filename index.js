@@ -6,11 +6,13 @@ module.exports = function (subdomain, key) {
   var product = require('./lib/product')(query);
   var productGroup = require('./lib/productGroup')(query);
   var stockLevels = require('./lib/stockLevels')(query);
+  var member = require('./lib/member')(query);
 
   module.query = query;
   module.product = product;
   module.productGroup = productGroup;
   module.stockLevels = stockLevels;
+  module.member = member;
 
   return module;
 };

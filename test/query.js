@@ -31,7 +31,7 @@ describe('Query', function() {
   });
 
   it('Performs a POST request', function(done) {
-    var options = { 
+    var options = {
       headers: {
         'X-SUBDOMAIN': 'CURRENT_SUBDOMAIN',
         'X-AUTH-TOKEN': 'CURRENT_KEY' },
@@ -41,6 +41,22 @@ describe('Query', function() {
     
     subject.query.post('localhost', function (result) {
       assert.equal(result, 'post');
+      done();
+    })
+  });
+
+  it('Performs a PUT request', function(done) {
+    var options = {
+      method: 'PUT',
+      headers: {
+        'X-SUBDOMAIN': 'CURRENT_SUBDOMAIN',
+        'X-AUTH-TOKEN': 'CURRENT_KEY' },
+      url: 'localhost'
+    };
+    td.when(request(options)).thenCallback('put');
+    
+    subject.query.put('localhost', function (result) {
+      assert.equal(result, 'put');
       done();
     })
   });
