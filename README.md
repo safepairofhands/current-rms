@@ -5,7 +5,7 @@
 This module allows your Node app to query the Current RMS API. Please feel free to join in the development of this module!
 
 
-## Installation
+## Installation
 
 This package is on npm, so can be installed using:
 
