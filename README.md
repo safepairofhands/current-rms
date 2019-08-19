@@ -1,6 +1,9 @@
 # Current RMS API Module
 
+[![Build Status](https://jenkins.tomgiddings.co.uk/buildStatus/icon?job=current-rms&subject=Tests)](https://jenkins.tomgiddings.co.uk/job/current-rms/)
+
 This module allows your Node app to query the Current RMS API. Please feel free to join in the development of this module!
+
 
 ## Installation
 
